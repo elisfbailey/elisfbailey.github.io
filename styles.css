@@ -60,11 +60,11 @@ button{
 #rainbowbutton
 {
 	position: absolute;
-	top: 35%;
+	top: 90%;
 	left: 48%;
 	transform: translate(-50%,-50%);
-	width: 200px;
-	height: 60px;
+	width: auto;
+	height: auto;
 	text-align: center;
 	line-height: 60px;
 	color: #fff;
@@ -121,7 +121,7 @@ button{
 	height: 20vh;
 	color: black;
 	font-size: 10em;
-	top: 30%;
+	top: 90%;
 	left: 20%;
 	position: absolute;
 
@@ -131,7 +131,7 @@ button{
 	font-family: 'Bad Script';
 	display: flex;
 	justify-content: center;
-	top: 40%;
+	top: 100%;
 	left: 50%;
 	color: black;
 	font-size: 10em;
@@ -299,6 +299,7 @@ h1 span:nth-child(6)
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	top: 10%;
 	
 	
 	border-radius: 20px;
@@ -332,8 +333,8 @@ h1 span:nth-child(6)
 
 #stormBox
 {
-	width: 40%;
-	height: 10%;
+	width: 55%;
+	height: auto;
 	position: relative;
 	border: 5px solid slategrey;
 	margin: auto;
@@ -367,16 +368,17 @@ h1 span:nth-child(6)
 {
 	position: relative;
 	height: auto;
-	width: 50%;
+	width: 100%;
+	
 	padding-left: 20px;
 	padding-right: 20px;
-	background: #11178a;
+	background:transparent;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	
 	
-	border-radius: 5PX;
+	border-radius: 2px;
 
 }
 #Box2:before
@@ -390,22 +392,70 @@ h1 span:nth-child(6)
 	background: #fff;
 	transform: skew(3deg,3sdeg);
 	z-index: -1;
+	background: linear-gradient(110deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+	background-size: 400%;
+	filter: blur(40px);
+	animation: animateButton 50s linear infinite;
+	
+}
+#quoteBoxBack2
+{
+	position: relative;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#Box3
+{
+	position: relative;
+	height: auto;
+	top:75%;
+	width: 100%;
+	
+	padding-left: 20px;
+	padding-right: 20px;
+	background: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	
+	border-radius: 2px;
+
+}
+#Box3:before
+{
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: #fff;
+	transform: skew(3deg,3sdeg);
+	z-index: -1;
 	background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
 	background-size: 400%;
 	filter: blur(40px);
-	animation: animateButton 15s linear infinite;
+	animation: animateButton 60s linear infinite;
 	
 }
 
 /*QUOTE BOX CONTAINER*/
 
-
 #quoteDisplay
 {
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+	align-items: center;
+
+
+	position: relative;
+	
+	
+	
     
 }
 
@@ -506,6 +556,7 @@ h1 span:nth-child(6)
     z-index: 1000;
 }
 
+
 /*QUOTE BUTTON*/
 #quoteButton
 {
@@ -518,6 +569,7 @@ h1 span:nth-child(6)
 	font-size: 15px;
 	overflow: hidden;
 	transition: 0.2s;
+	
 }
 #quoteButton:hover
 {
@@ -589,4 +641,111 @@ h1 span:nth-child(6)
 	bottom: 100%;
 	transition: 1s;
 	transition-delay: 0.75s;
+}
+
+#factButton
+{
+	position: relative;
+	display: flex;
+	padding: 15px 30px;
+	color: #2196f3;
+	letter-spacing: 4px;
+	text-decoration: none;
+	font-size: 15px;
+	overflow: hidden;
+	transition: 0.2s;
+}
+#factButton:hover
+{
+	color: #255784;
+	background: #2196f3;
+	box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+	transition-delay: 1s;
+}
+#factButton span
+{
+	position: absolute;
+	display: block;
+}
+#factButton span:nth-child(1)
+{
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg,transparent,#2196f3);
+
+}
+#factButton:hover span:nth-child(1)
+{
+	left: 100%;
+	transition: 1s;
+}
+#factButton span:nth-child(3)
+{
+	bottom: 0;
+	right: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg,transparent,#2196f3);
+
+}
+#factButton:hover span:nth-child(3)
+{
+	right: 100%;
+	transition: 1s;
+	transition-delay: 0.5s;
+}
+#factButton span:nth-child(2)
+{
+	top: -100%;
+	right: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(180deg,transparent,#2196f3);
+
+}
+#factButton:hover span:nth-child(2)
+{
+	top: 100%;
+	transition: 1s;
+	transition-delay: 0.25s;
+}
+#factButton span:nth-child(4)
+{
+	bottom: -100%;
+	left: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(360deg,transparent,#2196f3);
+
+}
+#factButton:hover span:nth-child(4)
+{
+	bottom: 100%;
+	transition: 1s;
+	transition-delay: 0.75s;
+}
+
+/*ONE TEAM BOX*/
+#OneTeamBox
+{
+	width: 70%;
+	height: auto;
+	position: relative;
+	border: 5px solid #fff;
+	margin: auto;
+	top:0;
+	left:0;
+	right: 0;
+	bottom: 0;
+	padding-left: 20px;
+	padding-bottom: 25px;
+	
+
+}
+#stormText
+{
+	align-items: center;
+	position: relative;
 }

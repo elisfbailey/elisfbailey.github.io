@@ -41,30 +41,37 @@ var containerScene5 = new ScrollMagic.Scene({triggerElement: '#stormBox', trigge
 
 var tl2 = new TimelineMax();
 tl2.from("#Box2", 1, {opacity:0, scale:0});
+tl2.from("#Box3", 1, {opacity:0, scale:0}, "2");
 var containerScene6 = new ScrollMagic.Scene({triggerElement: "#Box2", triggerHook:"onEnter"})
 .setTween(tl2)
+.addTo(controller);
+
+var tl3 = new TimelineMax();
+tl3.from("#OneTeamBox", 2, {opacity:0, scale:0} )
+var containerScene7 = new ScrollMagic.Scene({triggerElement:"#OneTeamBox", triggerHook:"onEnter"})
+.setTween(tl3)
 .addTo(controller);
 
 
 var containerScene = new ScrollMagic.Scene({triggerElement:'#Sun'})
 .setTween([plane, cloud1, cloud2, cloud3, cloud4, cloud5])
-.addIndicators()
+
 .addTo(controller);
 
 var containerScene2 = new ScrollMagic.Scene({triggerElement:'#Storm3', triggerHook:'onEnter'})
 .setTween([storm1, storm2, storm3, storm4, storm5, storm6, storm7, storm8, storm9, storm10, storm11, storm12, storm13])
-.addIndicators()
+
 .addTo(controller);
 
 var containerScene3 = new ScrollMagic.Scene({triggerElement:'#sunBox', triggerHook:'onEnter'})
 .setTween(sunBox)
 .setPin("#sticktome")
-.addIndicators()
+
 .addTo(controller);
 
 var containerScene4 = new ScrollMagic.Scene({triggerElement:'#poemSection', trigerHook:'onEnter'})
 .setTween(sonnet)
-.addIndicators()
+
 .addTo(controller);
 
 

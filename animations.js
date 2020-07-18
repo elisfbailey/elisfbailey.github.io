@@ -52,6 +52,12 @@ var containerScene7 = new ScrollMagic.Scene({triggerElement:"#OneTeamBox", trigg
 .setTween(tl3)
 .addTo(controller);
 
+var tl4 = new TimelineMax();
+tl4.from("#quoteHolder", 2, {opacity:0, scale:0, x:100, y:100})
+var containerScene8 = new ScrollMagic.Scene({triggerElement:"#quoteText", triggerHook: "onEnter"})
+.setTween(tl4)
+.addTo(controller);
+
 
 var containerScene = new ScrollMagic.Scene({triggerElement:'#Sun'})
 .setTween([plane, cloud1, cloud2, cloud3, cloud4, cloud5])

@@ -9,7 +9,7 @@ body {
 	background: black;
 	transition: background 30s ease 0s;
 	margin: 0;
-	padding: 0;
+	padding: 2px;
 	
 }
 button{
@@ -444,126 +444,117 @@ h1 span:nth-child(6)
 	
 }
 
-/*QUOTE BOX CONTAINER*/
-
-#quoteDisplay
+/*QUOTE BOXES CONTAINER*/
+#quoteHolder
 {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 	align-items: center;
+	background: #060c21;
+	min-height: 103vh;
+	
+	border: #fff solid 5px;
+	
+	
+}
 
-
+.wrapper
+{
 	position: relative;
+	margin:auto;
 	
+	width: 90%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-template-rows: auto;
+	grid-gap: 19%;
+}
+.wrapper .holder
+{
+	position: relative;
+	height: auto;
+	background: #060c21;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	
-	
-    
+	padding: 25px;
+}
+.wrapper .holder:before
+{
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: #fff;
+	transform: skew(2deg, 2deg);
+	z-index: -1;
+}
+.wrapper .holder:nth-child(1):before
+{
+	background: linear-gradient(315deg,#ff0057,#e64a19);
+}
+.wrapper .holder:nth-child(2):before
+{
+	background: linear-gradient(315deg,#89ff00,#00bcd4);
+}
+.wrapper .holder:nth-child(3):before
+{
+	background: linear-gradient(315deg,#e91e63,#5d02ff);
 }
 
-.quoteSquare
+.holder
 {
-    position: relative;
-    width: 400px;
-    height: 400px;
-    display: flex;
-    justify-content: left;
-    align-items: left;
-
-}
-
-.quoteSquare span:nth-child(1)
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 2px solid #fff;
-	border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
-	background: transparent;
-	
-    transition: 1s;
-    animation: animateBox 6s linear infinite;
-}
-.quoteSquare:hover span:nth-child(1)
-{
-    border: none;
-	background-color:  #11178a;
+	position: relative;
+	padding: 20px;
+	text-align: center;
 	
 }
-
-.quoteSquare span:nth-child(2)
+.holder .textcontent h2
 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-	border: 2px solid #fff;
-	opacity: 0.4;
-    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
-    transition: 1s;
-	animation: animateBox3 4s linear infinite;
-	background: transparent;
-	
+	position: absolute;
+	top: -60px;
+	right: 20px;
+	margin: 0;
+	padding: 0;
+	font-size: 40px;
+	color: rgba(255,255,255,.05);
+	transition:0.5s;
 }
-.quoteSquare:hover span:nth-child(2)
+.holder:hover .textContent h2
 {
-    border: none;
-	background-color:  #11178a;
-	
+	top:-140px;
 }
-
-.quoteSquare span:nth-child(3)
+.holder .textcontent p
 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-	border: 2px solid #fff;
-	opacity: 0.8;
-    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
-	transition: 1s;
-	background: transparent;
-	
-    animation: animateBox4 10s linear infinite;
-}
-.quoteSquare:hover span:nth-child(3)
-{
-    border: none;
-	background-color:  #11178a;
-	
+	margin: 0;
+	padding:0;
+	color: #fff;
+	font-size: 20px;
+	font-family: 'Times New Roman', Times, serif;
+	display: inline-block;
 }
 
-@keyframes animateBox3
-{
-    0% {transform: rotate(0deg);}
-    100% {transform: rotate(360deg);}
-}
-
-@keyframes animateBox4
-{
-    0% {transform: rotate(360deg);}
-    100% {transform: rotate(0deg);}
-}
-.quoteContent
-{
-    position: relative;
-    padding: 40px 60px;
-    color: #fff;
-    text-align: center;
-    transition: 0.5s;
-    z-index: 1000;
-}
 
 
 /*QUOTE BUTTON*/
-#quoteButton
+.holder .textcontent button
 {
 	position: relative;
-	display: flex;
-	padding: 15px 30px;
+	margin: 75% 0 0;
+	padding: 10px 20px;
+	text-decoration: none;
+	display: inline-block;
+	border: none;
+}
+
+.lightButton
+{
+	
+	
+	background-color: transparent;
 	color: #2196f3;
 	letter-spacing: 4px;
 	text-decoration: none;
@@ -572,19 +563,19 @@ h1 span:nth-child(6)
 	transition: 0.2s;
 	
 }
-#quoteButton:hover
+.lightButton:hover
 {
 	color: #255784;
 	background: #2196f3;
 	box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
 	transition-delay: 1s;
 }
-#quoteButton span
+.lightButton span
 {
 	position: absolute;
 	display: block;
 }
-#quoteButton span:nth-child(1)
+.lightButton span:nth-child(1)
 {
 	top: 0;
 	left: -100%;
@@ -593,12 +584,12 @@ h1 span:nth-child(6)
 	background: linear-gradient(90deg,transparent,#2196f3);
 
 }
-#quoteButton:hover span:nth-child(1)
+.lightButton:hover span:nth-child(1)
 {
 	left: 100%;
 	transition: 1s;
 }
-#quoteButton span:nth-child(3)
+.lightButton span:nth-child(3)
 {
 	bottom: 0;
 	right: -100%;
@@ -607,13 +598,13 @@ h1 span:nth-child(6)
 	background: linear-gradient(270deg,transparent,#2196f3);
 
 }
-#quoteButton:hover span:nth-child(3)
+.lightButton:hover span:nth-child(3)
 {
 	right: 100%;
 	transition: 1s;
 	transition-delay: 0.5s;
 }
-#quoteButton span:nth-child(2)
+.lightButton span:nth-child(2)
 {
 	top: -100%;
 	right: 0;
@@ -622,13 +613,13 @@ h1 span:nth-child(6)
 	background: linear-gradient(180deg,transparent,#2196f3);
 
 }
-#quoteButton:hover span:nth-child(2)
+.lightButton:hover span:nth-child(2)
 {
 	top: 100%;
 	transition: 1s;
 	transition-delay: 0.25s;
 }
-#quoteButton span:nth-child(4)
+.lightButton span:nth-child(4)
 {
 	bottom: -100%;
 	left: 0;
@@ -637,96 +628,15 @@ h1 span:nth-child(6)
 	background: linear-gradient(360deg,transparent,#2196f3);
 
 }
-#quoteButton:hover span:nth-child(4)
+.lightButton:hover span:nth-child(4)
 {
 	bottom: 100%;
 	transition: 1s;
 	transition-delay: 0.75s;
 }
 
-#factButton
-{
-	position: relative;
-	display: flex;
-	padding: 15px 30px;
-	color: #2196f3;
-	letter-spacing: 4px;
-	text-decoration: none;
-	font-size: 15px;
-	overflow: hidden;
-	transition: 0.2s;
-}
-#factButton:hover
-{
-	color: #255784;
-	background: #2196f3;
-	box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
-	transition-delay: 1s;
-}
-#factButton span
-{
-	position: absolute;
-	display: block;
-}
-#factButton span:nth-child(1)
-{
-	top: 0;
-	left: -100%;
-	width: 100%;
-	height: 2px;
-	background: linear-gradient(90deg,transparent,#2196f3);
 
-}
-#factButton:hover span:nth-child(1)
-{
-	left: 100%;
-	transition: 1s;
-}
-#factButton span:nth-child(3)
-{
-	bottom: 0;
-	right: -100%;
-	width: 100%;
-	height: 2px;
-	background: linear-gradient(270deg,transparent,#2196f3);
 
-}
-#factButton:hover span:nth-child(3)
-{
-	right: 100%;
-	transition: 1s;
-	transition-delay: 0.5s;
-}
-#factButton span:nth-child(2)
-{
-	top: -100%;
-	right: 0;
-	width: 2px;
-	height: 100%;
-	background: linear-gradient(180deg,transparent,#2196f3);
-
-}
-#factButton:hover span:nth-child(2)
-{
-	top: 100%;
-	transition: 1s;
-	transition-delay: 0.25s;
-}
-#factButton span:nth-child(4)
-{
-	bottom: -100%;
-	left: 0;
-	width: 2px;
-	height: 100%;
-	background: linear-gradient(360deg,transparent,#2196f3);
-
-}
-#factButton:hover span:nth-child(4)
-{
-	bottom: 100%;
-	transition: 1s;
-	transition-delay: 0.75s;
-}
 
 /*ONE TEAM BOX*/
 #OneTeamBox
@@ -750,3 +660,4 @@ h1 span:nth-child(6)
 	align-items: center;
 	position: relative;
 }
+

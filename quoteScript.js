@@ -15,10 +15,38 @@ var quotes = [
   
   
 function newQuote(){
-	var index =0; // Let's show a quote on page load
+	var index = 1; // Let's show a quote on page load
 	document.getElementById("quoteHere").innerHTML = quotes[index];
 
 	var randomNumber = Math.floor(Math.random()*(quotes.length));
 	document.getElementById("quoteHere").innerHTML = quotes[randomNumber];
 
 }
+
+var facts = [
+	"This page has over 1300 lines of code that are needed to make it work - from the background to the moving clouds to these info buttons with their clickable buttons - and every single line was written by a member of The One Team!",
+	"This interactive webpage is written in three different languages!"
+
+
+]
+function newFact(){
+	var index2 = 0;
+	document.getElementById("factHere").innerHTML = facts[index2];
+	var randomNumber2 = Math.floor(Math.random()*(facts.length));
+	document.getElementById("factHere").innerHTML = facts[randomNumber2];
+}
+
+var music = [
+	"You are listening to Somewhere Over the Rainbow by Israel Kamakawiwo'Ole. He is a native Hawaiian singer/songwriter and activist",
+	"The singer of the song you are listening to was written and sung by a activist who fought for Hawaiian rights and was know for promoting this message: the life of the land is perpetuated in righteousness",
+	"The music you are listening to may sound familiar - this is because it has been used in countless films and TV shows, from 50 First Dates to ER and Glee",
+	"This song is by a Hawaiin singer. In Hawaiian legends, the figure of the rainbow maiden is a messenger to the gods"
+]
+
+function newMusic(){
+	var index3 = 0;
+	document.getElementById("musicHere").innerHTML = music[index3];
+	var randomNumber3 = Math.floor(Math.random()*(music.length));
+	document.getElementById("musicHere").innerHTML = music[randomNumber3];
+}
+

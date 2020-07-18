@@ -523,9 +523,10 @@ h1 span:nth-child(6)
 	color: rgba(255,255,255,.05);
 	transition:0.5s;
 }
-.holder:hover .textContent h2
+.holder:hover .textcontent h2
 {
 	top:-140px;
+	color: #fff;
 }
 .holder .textcontent p
 {

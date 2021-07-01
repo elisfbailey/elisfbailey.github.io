@@ -1,664 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+
+.gallery-highlight {
+    width: 80%;
+    height: 50%;
+}
+
+section {
+    display: flex;
+    height: 100vh;
+}
+
 h1 {
-	font-size:50px;
-	font-family:didot;
-}
-
-
-
-body {
-	background: black;
-	transition: background 30s ease 0s;
-	margin: 0;
-	padding: 2px;
-	
-}
-button{
-	background: transparent;
-	border: none;
-}
-
-/*RAIN AND LIGHTENING*/
-
-
-.rain
-{
-	height: 200%;
-	padding: 0;
-}
-
-.rain:before
-{
-	content: '';
-	position: absolute;
-	width: 100%;
-	height: 200%;
-	background:#fff;
-	
-	opacity:0;
-}
-
-
-@keyframes lightening
-{
-	0% {opacity: 0;}
-	10% {opacity: 0;}
-	11% {opacity: 1;}
-	14% {opacity: 0;}
-	20% {opacity: 0;}
-	21% {opacity: 1;}
-	24% {opacity: 0;}
-	104% {opacity: 0;}
-}
-
-
-
-
-
-
-/*RAINBOW GLOWING BUTTON*/
-
-#rainbowbutton
-{
-	position: absolute;
-	top: 90%;
-	left: 48%;
-	transform: translate(-50%,-50%);
-	width: auto;
-	height: auto;
-	text-align: center;
-	line-height: 60px;
-	color: #fff;
-	font-size: 24px;
-	text-transform: uppercase;
-	text-decoration: none;
-	font-family: sans-serif;
-	box-sizing: border-box;
-	background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
-	background-size: 400%;
-	border-radius: 30px;
-	z-index: 1;
-
-}
-#rainbowbutton:hover
-{
-	animation: animateButton 8s linear infinite;
-}
-@keyframes animateButton
-{
-	0% {background-position: 0%;}
-	100% {background-position: 400%;}
-}
-#rainbowbutton:before
-{
-	content: '';
-	position: absolute;
-	top: -5px;
-	left: -5px;
-	right: -5px;
-	bottom: -5px;
-	z-index: -1;
-	background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
-	background-size: 400%;
-	border-radius: 40px;
-	filter: blur(60px);
-	opacity: 0;
-	transition: 0.5s;
-}
-#rainbowbutton:hover:before
-{
-	opacity: 1;
-	animation: animateButton 8s linear infinite;
-}
-
-/*GLOWING SCROLL TEXT*/
-@import url('https://fonts.googleapis.com/css?family=Bad+Script');
-
-#scrollText
-{
-	font-family: 'Bad Script';
-	display: flex;
-	justify-content: center;
-	height: 20vh;
-	color: black;
-	font-size: 10em;
-	top: 90%;
-	left: 20%;
-	position: absolute;
-
-}
-#downText
-{
-	font-family: 'Bad Script';
-	display: flex;
-	justify-content: center;
-	top: 100%;
-	left: 50%;
-	color: black;
-	font-size: 10em;
-	position: absolute;
-}	
-
-h1 span
-{
-	display: table-cell;
-	margin: 0;
-	padding: 0;
-	animation: animateText 3s linear infinite;
-}
-h1 span:nth-child(1)
-{
-	animation-delay: 0s;
-}
-h1 span:nth-child(2)
-{
-	animation-delay: 0.25s;
-}
-h1 span:nth-child(3)
-{
-	animation-delay: 0.5s;
-}
-h1 span:nth-child(4)
-{
-	animation-delay: 0.75s;
-}
-h1 span:nth-child(5)
-{
-	animation-delay: 1s;
-}
-h1 span:nth-child(6)
-{
-	animation-delay: 1.25s;
-}
-
-@keyframes animateText
-{
-	0%, 100%
-	{
-		color: yellow;
-		filter: blur(2px);
-		text-shadow: 0 0 10px #ffffff,
-					0 0 20px #ffffff,
-					0 0 40px #ffffff,
-					0 0 80px #ffffff,
-					0 0 120px #ffffff,
-					0 0 200px #ffffff;
-					
-					
-	}
-	20%, 80%
-	{
-		color: #111;
-		filter: blur(0px);
-		text-shadow: none;
-	}
-}
-
-/*DESCRIPTOR BOX*/
-
-#textBox
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    
-}
-
-.square
-{
-    position: relative;
-    width: 400px;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.square span:nth-child(1)
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color:  yellow;
-    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
-    transition: 0.5s;
-    animation: animateBox 6s linear infinite;
-}
-
-.square span:nth-child(2)
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-	background-color:  gold;
-	opacity: 0.4;
-    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
-    transition: 0.5s;
-    animation: animateBox 4s linear infinite;
-}
-
-.square span:nth-child(3)
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-	background-color:  orange;
-	opacity: 0.8;
-    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
-    transition: 0.5s;
-    animation: animateBox2 10s linear infinite;
-}
-
-
-@keyframes animateBox
-{
-    0% {transform: rotate(0deg);}
-    100% {transform: rotate(360deg);}
-}
-
-@keyframes animateBox2
-{
-    0% {transform: rotate(360deg);}
-    100% {transform: rotate(0deg);}
-}
-.content
-{
-    position: relative;
-    padding: 40px 60px;
+    font-size: 3em;
     color: #fff;
+    text-shadow: 0 0 10px #fff,
+                 0 0 20px #fff,
+                 0 0 40px #fff,
+                 0 0 80px #fff,
+                 0 0 120px #fff,
+                 0 0 140px #fff;
+                   
+}
+
+p {
     text-align: center;
-    transition: 0.5s;
-    z-index: 1000;
+    padding: 30px;
 }
 
-/*SONNET BOX*/
-
-.container
-{
-	position: relative;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	
-}
-#box
-{
-	position: relative;
-	height: auto;
-	padding-left: 20px;
-	padding-right: 20px;
-	background: transparent;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	top: 10%;
-	
-	
-	border-radius: 20px;
-
-}
-#box:before
-{
-	content: '';
-	position: absolute;
-	top: -2px;
-	left: -2px;
-	right: -2px;
-	bottom: -2px;
-	background: #fff;
-	transform: skew(12deg,12deg);
-	z-index: -1;
-	background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
-	background-size: 100%;
-	filter: blur(50px);
-	
+.spotify {
+    box-shadow: 0 0 10px white,
+                0 0 20px white;
+                
 }
 
-
-.sonnet
-{
-	position: relative;
-	padding: 20px;
+.storm-gallery {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
 
-/*THROUGH EVERY STROM BOX*/
-
-#stormBox
-{
-	width: 55%;
-	height: auto;
-	position: relative;
-	border: 5px solid slategrey;
-	margin: auto;
-	top:0;
-	left:0;
-	right: 0;
-	bottom: 0;
-	padding-left: 20px;
-	padding-bottom: 25px;
-	
-
-}
-#stormText
-{
-	align-items: center;
-	position: relative;
+.storm-description {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:lightslategray;
 }
 
-/*WEATHER STORM QUOTE BOX*/
-
-#quoteBoxBack
-{
-	position: relative;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.storm-preview {
+    display: flex;
+    width: 80%;
+    border: 2px solid lightslategray;
 }
 
-#Box2
-{
-	position: relative;
-	height: auto;
-	width: 100%;
-	
-	padding-left: 20px;
-	padding-right: 20px;
-	background:transparent;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	
-	
-	border-radius: 2px;
-
-}
-#Box2:before
-{
-	content: '';
-	position: absolute;
-	top: -2px;
-	left: -2px;
-	right: -2px;
-	bottom: -2px;
-	background: #fff;
-	transform: skew(3deg,3sdeg);
-	z-index: -1;
-	background: linear-gradient(110deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
-	background-size: 400%;
-	filter: blur(40px);
-	animation: animateButton 50s linear infinite;
-	
-}
-#quoteBoxBack2
-{
-	position: relative;
-	
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.storm-preview img {
+    height: 100px;
+    flex-grow: 1;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
 }
 
-#Box3
-{
-	position: relative;
-	height: auto;
-	top:75%;
-	width: 100%;
-	
-	padding-left: 20px;
-	padding-right: 20px;
-	background: transparent;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	
-	
-	border-radius: 2px;
-
+img.storm-active {
+    opacity: 1;
 }
-#Box3:before
-{
-	content: '';
-	position: absolute;
-	top: -2px;
-	left: -2px;
-	right: -2px;
-	bottom: -2px;
-	background: #fff;
-	transform: skew(3deg,3sdeg);
-	z-index: -1;
-	background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
-	background-size: 400%;
-	filter: blur(40px);
-	animation: animateButton 60s linear infinite;
-	
-}
-
-/*QUOTE BOXES CONTAINER*/
-#quoteHolder
-{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: #060c21;
-	min-height: 103vh;
-	
-	border: #fff solid 5px;
-	
-	
-}
-
-.wrapper
-{
-	position: relative;
-	margin:auto;
-	
-	width: 90%;
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-	grid-template-rows: auto;
-	grid-gap: 19%;
-}
-.wrapper .holder
-{
-	position: relative;
-	height: auto;
-	background: #060c21;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	
-	padding: 25px;
-}
-.wrapper .holder:before
-{
-	content: '';
-	position: absolute;
-	top: -2px;
-	left: -2px;
-	right: -2px;
-	bottom: -2px;
-	background: #fff;
-	transform: skew(2deg, 2deg);
-	z-index: -1;
-}
-.wrapper .holder:nth-child(1):before
-{
-	background: linear-gradient(315deg,#ff0057,#e64a19);
-}
-.wrapper .holder:nth-child(2):before
-{
-	background: linear-gradient(315deg,#89ff00,#00bcd4);
-}
-.wrapper .holder:nth-child(3):before
-{
-	background: linear-gradient(315deg,#e91e63,#5d02ff);
-}
-
-.holder
-{
-	position: relative;
-	padding: 20px;
-	text-align: center;
-	
-}
-.holder .textcontent h2
-{
-	position: absolute;
-	top: -60px;
-	right: 20px;
-	margin: 0;
-	padding: 0;
-	font-size: 40px;
-	color: rgba(255,255,255,.05);
-	transition:0.5s;
-}
-.holder:hover .textcontent h2
-{
-	top:-90px;
-	color: #fff;
-}
-.holder .textcontent p
-{
-	margin: 0;
-	padding:0;
-	color: #fff;
-	font-size: 20px;
-	font-family: 'Times New Roman', Times, serif;
-	display: inline-block;
-}
-
-
-
-/*QUOTE BUTTON*/
-.holder .textcontent button
-{
-	position: relative;
-	margin: 75% 0 0;
-	padding: 10px 20px;
-	text-decoration: none;
-	display: inline-block;
-	border: none;
-}
-
-.lightButton
-{
-	
-	
-	background-color: transparent;
-	color: #2196f3;
-	letter-spacing: 4px;
-	text-decoration: none;
-	font-size: 15px;
-	overflow: hidden;
-	transition: 0.2s;
-	
-}
-.lightButton:hover
-{
-	color: #255784;
-	background: #2196f3;
-	box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
-	transition-delay: 1s;
-}
-.lightButton span
-{
-	position: absolute;
-	display: block;
-}
-.lightButton span:nth-child(1)
-{
-	top: 0;
-	left: -100%;
-	width: 100%;
-	height: 2px;
-	background: linear-gradient(90deg,transparent,#2196f3);
-
-}
-.lightButton:hover span:nth-child(1)
-{
-	left: 100%;
-	transition: 1s;
-}
-.lightButton span:nth-child(3)
-{
-	bottom: 0;
-	right: -100%;
-	width: 100%;
-	height: 2px;
-	background: linear-gradient(270deg,transparent,#2196f3);
-
-}
-.lightButton:hover span:nth-child(3)
-{
-	right: 100%;
-	transition: 1s;
-	transition-delay: 0.5s;
-}
-.lightButton span:nth-child(2)
-{
-	top: -100%;
-	right: 0;
-	width: 2px;
-	height: 100%;
-	background: linear-gradient(180deg,transparent,#2196f3);
-
-}
-.lightButton:hover span:nth-child(2)
-{
-	top: 100%;
-	transition: 1s;
-	transition-delay: 0.25s;
-}
-.lightButton span:nth-child(4)
-{
-	bottom: -100%;
-	left: 0;
-	width: 2px;
-	height: 100%;
-	background: linear-gradient(360deg,transparent,#2196f3);
-
-}
-.lightButton:hover span:nth-child(4)
-{
-	bottom: 100%;
-	transition: 1s;
-	transition-delay: 0.75s;
-}
-
-
-
-
-/*ONE TEAM BOX*/
-#OneTeamBox
-{
-	width: 70%;
-	height: auto;
-	position: relative;
-	border: 5px solid #fff;
-	margin: auto;
-	top:0;
-	left:0;
-	right: 0;
-	bottom: 0;
-	padding-left: 20px;
-	padding-bottom: 25px;
-	
-
-}
-#stormText
-{
-	align-items: center;
-	position: relative;
-}
-
